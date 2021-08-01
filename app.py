@@ -1,8 +1,8 @@
 from flask import Flask , render_template , request
-import pickle
+import joblib
 import numpy as np
 
-model = pickle.load(open('iris.pkl' , 'rb'))
+model = joblib.load(open('iris.joblib' , 'rb'))
 
 app = Flask(__name__)
 

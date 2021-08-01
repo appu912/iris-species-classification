@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-import pickle
+import joblib
 
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
@@ -20,4 +20,4 @@ X_train , X_test , y_train , y_test = train_test_split(X , y , test_size = 0.3)
 sv = svm.SVC(kernel = 'linear' , C = 1)
 sv.fit(X_train , y_train)
 
-pickle.dump(sv , open('iris.pkl' , 'wb'))
+joblib.dump(sv , open('iris.joblib' , 'wb'))
