@@ -193,12 +193,12 @@
         <div class="model-content">
             <h1>{{data}}</h1>
             <div class="flower-img">
-                <img src="/static/{{data}}.jpg" alt="">
+                <img src="static/{{data}}.jpg" alt="">
             </div>
             <i class='bx bx-x close-btn' id = 'close-btn'></i>
         </div>
     </div>
-    <form action="https://iris-species-prd.herokuapp.com/predict" method = "POST" class="form-container" id = "form-container">
+    <form action="/predict" method = "POST" class="form-container" id = "form-container">
         <div class="heading-box">
             <h1 class="heading">Iris Species <br> Classification</h1>
         </div>
