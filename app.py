@@ -6,11 +6,11 @@ model = joblib.load(open('iris.joblib' , 'rb'))
 
 app = Flask(__name__)
 
-@app.route('/' , methods = ["GET"])
+@app.route('https://iris-species-prd.herokuapp.com/' , methods = ["GET"])
 def Home():
     return render_template('index.html' , data = "" , c = "")
 
-@app.route('/predict' , methods = ['POST'])
+@app.route('https://iris-species-prd.herokuapp.com/predict' , methods = ['POST'])
 def predict():
     sepalLength = request.form['sepalLength']
     sepalWidth = request.form['sepalWidth']
